@@ -88,11 +88,15 @@ q mcp status --name XXXXX
 
 <img width="488" height="64" alt="image (44)" src="https://github.com/user-attachments/assets/73c1a068-c8aa-4a5b-8a32-28e6d9c190e7" />
 
+
 <img width="468" height="239" alt="image (45)" src="https://github.com/user-attachments/assets/81b907fd-73e3-4f33-8ae2-c56b2269e902" />
+
 
 <img width="468" height="236" alt="image (46)" src="https://github.com/user-attachments/assets/688c9836-bf0e-429e-b546-8878c19034fd" />
 
+
 <img width="468" height="244" alt="image (47)" src="https://github.com/user-attachments/assets/0bb9fe0c-2852-43b5-ab72-642db548c7da" />
+
 
 <img width="468" height="243" alt="image (48)" src="https://github.com/user-attachments/assets/1debba7f-39f2-4ffa-b955-dffd31a5a920" />
 
