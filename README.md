@@ -85,21 +85,15 @@ q mcp status --name XXXXX
 
 
 登記使用的3個mcp server 可以幫助完成RVTools的分析，
+<img width="869" height="113" alt="Screenshot 2025-08-22 at 12 32 47 PM" src="https://github.com/user-attachments/assets/a7f2c3a5-2bd7-49e7-a401-8b5960b7711b" />
 
-<img width="488" height="64" alt="image (44)" src="https://github.com/user-attachments/assets/73c1a068-c8aa-4a5b-8a32-28e6d9c190e7" />
+<img width="868" height="438" alt="Screenshot 2025-08-22 at 12 32 52 PM" src="https://github.com/user-attachments/assets/237d549c-6319-4e9d-a9e5-0d40d30c0329" />
 
+<img width="867" height="438" alt="Screenshot 2025-08-22 at 12 32 57 PM" src="https://github.com/user-attachments/assets/fb35fcbb-54da-4325-af64-7976549bedde" />
 
-<img width="468" height="239" alt="image (45)" src="https://github.com/user-attachments/assets/81b907fd-73e3-4f33-8ae2-c56b2269e902" />
+<img width="873" height="452" alt="Screenshot 2025-08-22 at 12 33 02 PM" src="https://github.com/user-attachments/assets/59ff9da4-88a5-47f6-9590-a9f0822491bc" />
 
-
-<img width="468" height="236" alt="image (46)" src="https://github.com/user-attachments/assets/688c9836-bf0e-429e-b546-8878c19034fd" />
-
-
-<img width="468" height="244" alt="image (47)" src="https://github.com/user-attachments/assets/0bb9fe0c-2852-43b5-ab72-642db548c7da" />
-
-
-<img width="468" height="243" alt="image (48)" src="https://github.com/user-attachments/assets/1debba7f-39f2-4ffa-b955-dffd31a5a920" />
-
+<img width="866" height="447" alt="Screenshot 2025-08-22 at 12 33 06 PM" src="https://github.com/user-attachments/assets/fa201f92-2dcb-4806-9e14-1f34ae5ba014" />
 
 
 ### Amazon Q CLI 智能遷移地端MySQL 資料庫到AWS RDS MySQL
