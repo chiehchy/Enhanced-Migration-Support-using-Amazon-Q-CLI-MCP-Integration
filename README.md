@@ -1,5 +1,6 @@
-
 # Enhanced Migration Support using Amazon Q CLI MCP Integration
+
+
 
 
 ### Outline
@@ -7,12 +8,15 @@
 本Lab 通過 Amazon Q CLI + MCP 展示如何將地端的環境遷移到AWS
 
 
-[通過 Amazon Q CLI 遷移DB 到AWS 託管的RDS MySQL](https://quip-amazon.com/xhmKAldRC2sr/Lab-Amazon-Q-CLI-MySQL-AWS-RDS-MySQL#temp:C:CDDec05ab16c86b466791658d64f)
 
-* [給予EC2 所使用的IAM Role admin 權限](https://quip-amazon.com/xhmKAldRC2sr/0822-Workshop#temp:C:CDDb448925c441841ed8cddaafde)
-* [安裝本地MySQL](https://quip-amazon.com/xhmKAldRC2sr/0822-Workshop#temp:C:CDD66ac53b192774b8c87486ef33)
-* [安裝雲端RDS MySQL](https://quip-amazon.com/xhmKAldRC2sr/0822-Workshop#temp:C:CDD39499f6fa6cf48c8a40b59de8)
-* [從地端將MySQL 資料庫遷移到雲端](https://quip-amazon.com/xhmKAldRC2sr/0822-Workshop#temp:C:CDDc4460d357c0242e1a46b6e592)
+* [前置作業](https://quip-amazon.com/xhmKAldRC2sr/Enhanced-Migration-Support-using-Amazon-Q-CLI-MCP-Integration#temp:C:CDD282491bd12f547bcbd98d0104)
+* [Q developer 設定注意事項](https://quip-amazon.com/xhmKAldRC2sr/Enhanced-Migration-Support-using-Amazon-Q-CLI-MCP-Integration#temp:C:CDD403f67be1d6347ac8ac726dda)
+* [Amazon Q CLI  MCP 建立 VMWare 遷移計劃](https://quip-amazon.com/xhmKAldRC2sr/Enhanced-Migration-Support-using-Amazon-Q-CLI-MCP-Integration#temp:C:CDD5c037dbd7b10465cbe5870fbe)
+* [通過 Amazon Q CLI 遷移DB 到AWS 託管的RDS MySQL](https://quip-amazon.com/xhmKAldRC2sr/Lab-Amazon-Q-CLI-MySQL-AWS-RDS-MySQL#temp:C:CDDec05ab16c86b466791658d64f)
+    * [給予EC2 所使用的IAM Role admin 權限](https://quip-amazon.com/xhmKAldRC2sr/0822-Workshop#temp:C:CDDb448925c441841ed8cddaafde)
+    * [安裝本地MySQL](https://quip-amazon.com/xhmKAldRC2sr/0822-Workshop#temp:C:CDD66ac53b192774b8c87486ef33)
+    * [安裝雲端RDS MySQL](https://quip-amazon.com/xhmKAldRC2sr/0822-Workshop#temp:C:CDD39499f6fa6cf48c8a40b59de8)
+    * [從地端將MySQL 資料庫遷移到雲端](https://quip-amazon.com/xhmKAldRC2sr/0822-Workshop#temp:C:CDDc4460d357c0242e1a46b6e592)
 
 
 
@@ -28,7 +32,7 @@
 
 
 
-### Q developer 設定注意事項：
+### Q developer 設定注意事項
 
 
 
@@ -75,14 +79,22 @@ q mcp status --name XXXXX
 ```
 
 
+
+
+### Amazon Q CLI  MCP 建立 VMWare 遷移計劃
+
+
 登記使用的3個mcp server 可以幫助完成RVTools的分析，
 
-[Image: image.png]
-[Image: image.png]
-[Image: image.png]
-[Image: image.png]
-[Image: image.png]
+<img width="488" height="64" alt="image (44)" src="https://github.com/user-attachments/assets/73c1a068-c8aa-4a5b-8a32-28e6d9c190e7" />
 
+<img width="468" height="239" alt="image (45)" src="https://github.com/user-attachments/assets/81b907fd-73e3-4f33-8ae2-c56b2269e902" />
+
+<img width="468" height="236" alt="image (46)" src="https://github.com/user-attachments/assets/688c9836-bf0e-429e-b546-8878c19034fd" />
+
+<img width="468" height="244" alt="image (47)" src="https://github.com/user-attachments/assets/0bb9fe0c-2852-43b5-ab72-642db548c7da" />
+
+<img width="468" height="243" alt="image (48)" src="https://github.com/user-attachments/assets/1debba7f-39f2-4ffa-b955-dffd31a5a920" />
 
 
 
@@ -92,41 +104,39 @@ q mcp status --name XXXXX
 
 * 在控制台找到 **EC2**
 
-<img width="989" height="391" alt="image (32)" src="https://github.com/user-attachments/assets/128bc5df-c09a-401a-9be7-c5a1d7cde219" />
+<img width="989" height="391" alt="image (49)" src="https://github.com/user-attachments/assets/e04bd334-edd1-4dc5-81b1-e5c5ae084a95" />
+
 
 * 在左側選擇Instances → code-server-stack-CodeServer → Security → 點擊IAM Role 
 
-<img width="1352" height="520" alt="image (33)" src="https://github.com/user-attachments/assets/53effc0f-ff76-45f9-a51c-66c11510378f" />
+<img width="1352" height="520" alt="image (50)" src="https://github.com/user-attachments/assets/6f4947b8-3fdf-45fc-ac01-255e5fe7e196" />
 
 
 * 在右邊選擇 Add permissions → Attach policies →. AdminstratorAceess → Add permission
-<img width="1350" height="547" alt="image (34)" src="https://github.com/user-attachments/assets/08104eaf-a775-4b52-b1a2-4a3691680f4d" />
 
-<img width="1318" height="249" alt="image (35)" src="https://github.com/user-attachments/assets/87d5790e-d358-4f29-aeea-c5c005440f83" />
+<img width="1350" height="547" alt="image (51)" src="https://github.com/user-attachments/assets/30da6224-cf90-43db-9e8d-1cbeb6110eff" />
 
-<img width="1546" height="210" alt="image (36)" src="https://github.com/user-attachments/assets/2707f16a-1a9a-4351-a2ea-61c795bf2e57" />
+<img width="1318" height="249" alt="image (52)" src="https://github.com/user-attachments/assets/5f8fda90-3388-4b8a-90d6-00360051ca40" />
 
+<img width="1546" height="210" alt="image (53)" src="https://github.com/user-attachments/assets/b4eea0d0-0489-42d9-a4ce-cb0bcaab5206" />
 
 
 2. 在本地安裝MySQL
-
-
 
 * 在Terminall 輸入Q 啟動Amazon Q, 接著輸入下面Prompt
 
 幫我在本機安裝Community MySQL database, 並幫我設定帳號密碼為 root 和 password 123 , 安裝employee 範例資料庫
 
-<img width="927" height="413" alt="image (37)" src="https://github.com/user-attachments/assets/941974a0-d9b1-48f6-aca3-a036b9d61965" />
+<img width="927" height="413" alt="image (54)" src="https://github.com/user-attachments/assets/49760190-f3e9-49b2-9c7f-11cb315f58c8" />
 
-<img width="829" height="269" alt="image (38)" src="https://github.com/user-attachments/assets/4d71b4b8-c71a-4b1f-b16b-2e2c20437cc8" />
+<img width="829" height="269" alt="image (55)" src="https://github.com/user-attachments/assets/5a86b6d7-201b-467a-9e5d-fb3ad347e6e4" />
 
-<img width="966" height="596" alt="image (39)" src="https://github.com/user-attachments/assets/c3ddefd9-689f-453a-9933-b15f063d0898" />
+<img width="966" height="596" alt="image (56)" src="https://github.com/user-attachments/assets/c9119e5f-c773-46b4-ac83-5deb4950cfff" />
 
 
 * 開啟另外一個terminal 確認可以成功連接MySQL
 
-<img width="706" height="403" alt="image (40)" src="https://github.com/user-attachments/assets/281de0d9-c485-43b9-a5d2-fa3eb47ef71d" />
-
+<img width="706" height="403" alt="image (57)" src="https://github.com/user-attachments/assets/334a0eb9-fa50-42f4-9f2a-4eb7d02b4036" />
 
 
 3. 通過Amazon Q CLI 安裝RDS MySQL
@@ -137,12 +147,13 @@ q mcp status --name XXXXX
 
 幫我在我的aws 帳號下安裝rds mysql8, 實例類型為t3.medium, 帳號密碼為 root 和 password 123, 要確保我的本地可以連上這台mysql
 
-<img width="1037" height="663" alt="image (41)" src="https://github.com/user-attachments/assets/0cd0b1a5-f603-4319-ba9a-186de7abeeb4" />
+<img width="1037" height="663" alt="image (58)" src="https://github.com/user-attachments/assets/38da91db-2896-4635-819b-f3e4c3135634" />
 
 
 * 開啟另外一個terminal 確認可以成功連接 RDS MySQL
 
-<img width="1040" height="190" alt="image (42)" src="https://github.com/user-attachments/assets/e5fffb24-801e-4f3c-8ebf-1008792a3e7c" />
+<img width="1040" height="190" alt="image (59)" src="https://github.com/user-attachments/assets/149e4ee1-d460-4362-a975-fa017eea700a" />
+
 
 
 4. 使用Amazon Q CLI 遷移 MySQL  資料庫
@@ -163,7 +174,9 @@ user: root
 password : password123
 ```
 
-<img width="959" height="457" alt="image (43)" src="https://github.com/user-attachments/assets/44401089-70bf-450d-b389-052fff42e2d1" />
+<img width="959" height="457" alt="image (60)" src="https://github.com/user-attachments/assets/3b76a50e-9774-4932-816d-414209d774c7" />
+
+
 
 
 
