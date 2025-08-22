@@ -8,8 +8,6 @@
 本Lab 通過 Amazon Q CLI + MCP 展示如何將地端的環境遷移到AWS
 
 
-
-* [前置作業](https://quip-amazon.com/xhmKAldRC2sr/Enhanced-Migration-Support-using-Amazon-Q-CLI-MCP-Integration#temp:C:CDD282491bd12f547bcbd98d0104)
 * [Q developer 設定注意事項](https://quip-amazon.com/xhmKAldRC2sr/Enhanced-Migration-Support-using-Amazon-Q-CLI-MCP-Integration#temp:C:CDD403f67be1d6347ac8ac726dda)
 * [Amazon Q CLI  MCP 建立 VMWare 遷移計劃](https://quip-amazon.com/xhmKAldRC2sr/Enhanced-Migration-Support-using-Amazon-Q-CLI-MCP-Integration#temp:C:CDD5c037dbd7b10465cbe5870fbe)
 * [通過 Amazon Q CLI 遷移DB 到AWS 託管的RDS MySQL](https://quip-amazon.com/xhmKAldRC2sr/Lab-Amazon-Q-CLI-MySQL-AWS-RDS-MySQL#temp:C:CDDec05ab16c86b466791658d64f)
@@ -20,21 +18,8 @@
 
 
 
-### （Optional）前置作業
-
-1. 透過Q分析RVtool 的檔案收集：[RVTools_export_all_2025-02-06_19.36.35.zip](https://quip-amazon.com/-/blob/CDD9AAMtVK5/HzwMtWdyfmSXMrhwNxiIJQ?name=RVTools_export_all_2025-02-06_19.36.35.zip&s=xhmKAldRC2sr)  
-    RVTool檔案下載連結：https://ws-assets-prod-iad-r-iad-ed304a55c2ca1aee.s3.us-east-1.amazonaws.com/72934c0e-28a4-4427-bfd1-417e46d678b2/config-scripts/RVTools_export_all_2025-02-06_19.36.35.zip
-    RVTool檔案短網址：
-    https://mistertanuki.blogspot.com/2018/08/gather-vmware-vsphere-info-with-rvtools.html
-    *RVTools* 除了可以查看vSphere 的資訊，並可匯出保存之外，也可以觀察一些VM 的不正常使用狀況，算是幫助管理者的一個小工具
-2. 使用Prompt: 分析RVTools資料夾中的檔案，規劃搬遷至雲上Amazon Elastic VMware Service (Amazon EVS)的計畫，資料庫的部分改換使用RDS MySQL，並產生架構圖
-3. 生成資料庫規格檔：[vmware-to-aws-migration-plan.md](https://quip-amazon.com/-/blob/CDD9AAMtVK5/ns30n2_pWtl5DYyt5-gwDA?name=vmware-to-aws-migration-plan.md&s=xhmKAldRC2sr) 
-
-
 
 ### Q developer 設定注意事項
-
-
 
 ```
 /profile 換成 /agent
@@ -47,8 +32,6 @@ Commands:
   help         Print this message or the help of the given subcommand(s)
 
 ```
-
-
 
 ```
 #幫助指令
@@ -67,8 +50,6 @@ Commands:
 
 ```
 
-
-
 ```
 #起始使用設定
 q chat --agent documentation-profile
@@ -82,6 +63,16 @@ q mcp status --name XXXXX
 
 
 ### Amazon Q CLI  MCP 建立 VMWare 遷移計劃
+1. 透過Q分析RVtool 的檔案收集：[RVTools_export_all_2025-02-06_19.36.35.zip](https://quip-amazon.com/-/blob/CDD9AAMtVK5/HzwMtWdyfmSXMrhwNxiIJQ?name=RVTools_export_all_2025-02-06_19.36.35.zip&s=xhmKAldRC2sr)  
+    RVTool檔案下載連結：https://ws-assets-prod-iad-r-iad-ed304a55c2ca1aee.s3.us-east-1.amazonaws.com/72934c0e-28a4-4427-bfd1-417e46d678b2/config-scripts/RVTools_export_all_2025-02-06_19.36.35.zip
+    RVTool檔案短網址：
+    https://mistertanuki.blogspot.com/2018/08/gather-vmware-vsphere-info-with-rvtools.html
+    *RVTools* 除了可以查看vSphere 的資訊，並可匯出保存之外，也可以觀察一些VM 的不正常使用狀況，算是幫助管理者的一個小工具
+2. 使用Prompt: 分析RVTools資料夾中的檔案，規劃搬遷至雲上Amazon Elastic VMware Service (Amazon EVS)的計畫，資料庫的部分改換使用RDS MySQL，並產生架構圖
+3. 生成資料庫規格檔：[vmware-to-aws-migration-plan.md](https://quip-amazon.com/-/blob/CDD9AAMtVK5/ns30n2_pWtl5DYyt5-gwDA?name=vmware-to-aws-migration-plan.md&s=xhmKAldRC2sr) 
+
+
+
 
 
 登記使用的3個mcp server 可以幫助完成RVTools的分析，
